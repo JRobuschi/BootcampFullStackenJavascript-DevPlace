@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Grupal</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#consignas">Consignas</a>
+        <a href="#consigna1">Consignas 1</a>
+        <a href="#consigna2">Consignas 2</a>
+    </nav>
+    <br />
+    <br />
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+            alt="" width="500" height="500" />
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque vel
+            ullam facere officiis, totam eaque quibusdam assumenda doloribus,
+            delectus quo nesciunt eius eligendi repellendus atque ratione ipsam
+            dicta natus non.
+        </p>
+    </div>
+    <main>
+        <section id="consignas">
+            <h2>Consignas</h2>
+            <li>Crear un menu desplegable, con opciones múltiples</li>
+            <li>
+                Primera consigna crear un form con la máxima cantidad de inputs
+                distintos
+            </li>
+            <li>Crear un ancla que se mueva por los dos sectores</li>
+        </section>
+        <hr />
+        <section id="consigna1">
+            <h3>Crea un menu desplegable</h3>
+            <form>
+                <p>Seleccion cual de estos es su deporte favorito:</p>
+                <select name="deporte">
+                    <option>Fútbol</option>
+
+                    <option>Críquet</option>
+
+                    <option>Básquetbol</option>
+
+                    <option>Hockey</option>
+
+                    <option>Tenis</option>
+                </select>
+                <input type="submit" value="Enviar" />
+            </form>
+        </section>
+        <br />
+        <hr />
+        <section id="consigna2">
+            <div class="form">
+                <h3>Complete el siguiente formulario con datos reales</h3>
+                <form action="" method="post">
+                    <div class="form-nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Ingrese su nombre" required />
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Ingrese su apellido" required />
+                    </div>
+                    <br />
+                    <div class="form-date">
+                        <label for="Nacimiento">Nacimiento</label>
+                        <input type="date" />
+                    </div>
+                    <br />
+                    <div class="form-mail">
+                        <label for="mail">Mail</label>
+                        <input type="email" id="mail" placeholder="Ingresar Mail" required />
+                    </div>
+                    <br />
+                    <div class="form-numero">
+                        <label for="numero">Telefono</label>
+                        <input type="number" id="telefono" placeholder="Ingrese su telefono" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="form-color">Color Favorito</label>
+                        <input type="color" name="color" id="" />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="form-file">Subi tu CV</label>
+                        <input type="file" />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="form-descripcion">Acerca de vos</label>
+                    </div>
+
+                    <div>
+                        <textarea name="textarea" rows="10" cols="50"></textarea>
+                    </div>
+                    <div>
+                        <input type="radio" name="cookies" value="acept" />I Accept
+                        Cookies <input type="radio" name="cookies" value="noAcept" />I do
+                        Not Accept Cookies <br /><br />
+                    </div>
+
+                    <div>
+                        <label for="emailAcept">I agree to receive email </label>
+                        <input type="checkbox" />
+                    </div>
+                    <br />
+                    <div>
+                        <button type="reset">Cancel Request</button>
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </form>
+                <br />
+                <hr />
+
+                <footer>
+                    <p>
+                        Pagina hecha por Juan Pablo Moscoloni, Juan Cruz Robuschi y
+                        Federico Robledo
+                    </p>
+                    <a href="#">Volver al Inicio</a>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
