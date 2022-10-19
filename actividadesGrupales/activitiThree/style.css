@@ -58,29 +58,34 @@ header {
 
 /* termino el header*/
 main {
+  display: flex;
+  flex-direction: center;
 }
 .product__ofert {
   display: grid;
   justify-content: start;
-  grid-template-columns: 30% 30% 30% 30%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-column: 4;
   grid-row: 2;
-  padding: 20px;
   margin-right: 20px;
 }
 
 .product__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .product__item img {
-  width: 40%;
+  width: 60%;
 }
 
 /* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
 @media screen and (max-width: 1024px) {
   .product__ofert {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 33% 33% 33%;
     grid-column: 3;
     grid-row: 4;
   }
@@ -91,7 +96,7 @@ main {
 @media screen and (max-width: 600px) {
   .product__ofert {
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 50% 50%;
     grid-column: 2;
     grid-row: 6;
   }
