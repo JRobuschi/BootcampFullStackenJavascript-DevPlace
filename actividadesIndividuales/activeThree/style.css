@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  background: black;
+  box-shadow: 0 1rem 1rem rgba(black, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container ul {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.container button {
+  display: none;
+}
+
+.container a {
+  color: white;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.container .nav__logo h3 {
+  color: white;
+}
+
+.container a:hover {
+  color: #03bb85;
+  font-size: 1rem;
+  transition: 0.6s;
+}
+
+/*HASTA ACA EL NAV*/
+.container {
+}
+
+.header__content {
+  text-align: center;
+  width: 60%;
+}
+
+.header__content p {
+  text-align: center;
+  margin: 20px;
+}
+
+.header__content a {
+  background: black;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+@media screen and (max-width: 1024px) {
+  .header__image {
+    width: 40%;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 600px) {
+}
+/*HASTA ACA EL HEADER*/
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 2rem;
+}
+.container2 article {
+  background: #03bb85;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  height: fit-content;
+  transition: all 400ms ease;
+}
+.container2 article i {
+  transition: all 400ms ease;
+}
+.container2 article:hover {
+  margin-top: -0.5rem;
+  background: transparent;
+  border: 2px solid #03bb85;
+}
+.container2 article i:hover {
+  font-size: 1.7rem;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+@media screen and (max-width: 1024px) {
+  .container2 {
+    gap: 1rem;
+    grid-template-columns: repeat (2, 1fr);
+  }
+
+  .container2 article {
+    padding: 1.2rem;
+    gap: 0.8rem;
+  }
+  .container2 article:hover {
+    margin: 0;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 600px) {
+  .container2 {
+    grid-template-columns: 1fr;
+  }
+  .container2 article div h4 {
+    margin-bottom: 0.8rem;
+  }
+}
+/*termina el services*/
+
+#companies {
+  text-align: center;
+  margin-top: 100px;
+}
+.sevices__div {
+  text-align: center;
+  background: black;
+  color: white;
+}
+.sevices__div h2 {
+  padding: 1rem;
+}
+.sevices__div p {
+  padding-bottom: 1rem;
+}
+.container3 {
+  display: flex;
+  margin: 50px;
+  max-width: 100vh;
+}
+
+.company__image:hover {
+  transition: 0.6s;
+  filter: opacity(0.5);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/*termina el companies*/
+#contactUs {
+  padding: 30px;
+}
+
+.form {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+  color: black;
+  text-align: center;
+}
+
+.form__title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form__paragraph {
+  font-weight: 300;
+}
+
+.form__link {
+  font-weight: 400;
+  color: black;
+}
+
+.form__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+
+.form__group {
+  position: relative;
+  color: #5757577e;
+}
+
+.form__input {
+  width: 100%;
+  background: none;
+  color: #706c6c;
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5757577e;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  transform: translateY(-12px) scale(0.7);
+  transform-origin: left top;
+  color: #03bb85;
+}
+
+.form__label {
+  color: #5757577e;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color 0.3s;
+}
+
+.form__submit {
+  background: #03bb85;
+  color: #fff;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.form__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #03bb85;
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform 0.4s;
+}
+
+/* termina el form*/
+footer {
+  background: black;
+  display: flex;
+  color: white;
+}
+
+.footer__div {
+  display: flex;
+}
+
+.footer__div p {
+  margin: 20px;
+}
