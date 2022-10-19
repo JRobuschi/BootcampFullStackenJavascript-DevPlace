@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(34, 34, 34);
+}
+.imagen__logo {
+  width: 22%;
+  height: 110px;
+  background: url("https://cdn.discordapp.com/attachments/1031626470654742598/1032354722826420344/Netflix_2015_logo.svg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#nav__items {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav__items a {
+  padding: 30px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+#nav__items a:hover {
+  color: rgb(217, 25, 34);
+  font-size: 1.1rem;
+  transition: 0.6s;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+
+@media screen and (max-width: 1024px) {
+  #nav__items {
+    display: none;
+  }
+}
+
+/* termino el header*/
+main {
+}
+.product__ofert {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 30% 30% 30% 30%;
+  grid-column: 4;
+  grid-row: 2;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.product__item {
+}
+
+.product__item img {
+  width: 40%;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+@media screen and (max-width: 1024px) {
+  .product__ofert {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column: 3;
+    grid-row: 4;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 600px) {
+  .product__ofert {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-column: 2;
+    grid-row: 6;
+  }
+}
+
+footer {
+  height: 50px;
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: center;
+}
