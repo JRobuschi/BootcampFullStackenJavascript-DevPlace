@@ -105,7 +105,7 @@ main {
 
 /* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   main {
     grid-template-columns: 1fr;
   }
