@@ -1,0 +1,37 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="color">
+    <div class="container__div">
+      <div class="ingresar__div">
+        <input
+          id="letra"
+          type="text"
+          placeholder="Dame una letra"
+          maxlength="1"
+        />
+        <button id="boton">Comprobar</button>
+      </div>
+
+      <div id="resultado"></div>
+
+      <div class="div__intentos">
+        <h2>Intentos</h2>
+        <div id="intentos"></div>
+      </div>
+
+      <div class="div__historial">
+        <h2>Historial</h2>
+        <div id="historial"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
