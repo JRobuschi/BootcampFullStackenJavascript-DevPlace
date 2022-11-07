@@ -1,0 +1,17 @@
+.card-body {
+  display: flex !important;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.card-body div {
+  text-align: justify;
+}
+.card-body h5 {
+  text-align: center;
+}
+#ejemplo {
+  text-align: center;
+  text-decoration: underline;
+}

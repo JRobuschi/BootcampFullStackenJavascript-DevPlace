@@ -1,5 +1,3 @@
-const prompt = require("prompt-sync")({ sigint: true });
-
 class Persona {
   dni;
   nombre;
@@ -12,73 +10,67 @@ class Persona {
     this.apellido = apellido;
     this.telefono = telefono;
   }
+}
 
-  setDni(dni) {
-    return (this.dni = dni);
+class UI {
+  addPersona(user) {
+    const userList = document.getElementById("product-list");
+    const element = document.createElement("div");
+    element.innerHTML = `
+  <div class="card text-center mb-4" id="element_${user.dni}">
+      <div class="card-body">
+         <strong>dni</strong>: ${user.dni}
+         <strong>Nombre</strong>: ${user.nombre}
+         <strong>Apellido</strong>: ${user.apellido}
+         <strong>Telefono</strong>: ${user.telefono}
+         <a href="#" data-id="element_${user.dni}" id="eliminar_${user.dni}"  class="btn btn-danger" name="delete">Eliminar</a>
+      </div>
+  </div>
+  `;
+    userList.appendChild(element);
   }
-  setNombre(nombre) {
-    return (this.nombre = nombre);
+
+  restForm() {
+    document.getElementById("product-form").reset();
   }
-  setApellido(apellido) {
-    return (this.apellido = apellido);
-  }
-  setTelefono(telefono) {
-    return (this.telefono = telefono);
-  }
-  getDni() {
-    return this.dni;
-  }
-  getNombre() {
-    return this.nombre;
-  }
-  getApellido() {
-    return this.apellido;
-  }
-  getTelefono() {
-    return this.telefono;
+
+  deletePersona(element) {
+    if (element.dni === "delete") {
+      element.parentElement.parentElement.parentElement.remove();
+    }
   }
 }
 
-var opcion;
+document
+  .getElementById("product-form")
+  .addEventListener("submit", function (e) {
+    const dni = document.getElementById("dni").value;
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const telefono = document.getElementById("telefono").value;
 
-var datos = [];
+    const user = new Persona(dni, nombre, apellido, telefono);
 
-do {
-  option = parseInt(
-    prompt(
-      "Ingrese 1 para Agregar un usuario, 2 para Eliminar un usuario, 3 para Consultar si existe un usuario o 4 si ya no quiere ingresar mas datos: "
-    )
-  );
+    const ui = new UI();
+    ui.addPersona(user);
+    ui.restForm();
 
-  if (option == 1) {
-    function crearPersonaNueva() {
-      var dni = prompt("Dni: ");
-      var nombre = prompt("Nombre: ");
-      var apellido = prompt("Apellido: ");
-      var telefono = prompt("Telefono: ");
-      let user = new Persona(dni, nombre, apellido, telefono);
-      return user;
-    }
+    document
+      .getElementById("eliminar_" + dni)
+      .addEventListener("click", function (e) {
+        console.log(e);
+        const f = this.getAttribute("data-id");
+        document.getElementById(f).remove();
+      });
 
-    let nueva = datos.push(crearPersonaNueva());
-    console.table(datos);
-  } else if (option == 2) {
-    var documento = prompt("Ingrese el DNI de la persona que desea Eliminar: ");
-    eliminarIndice(documento);
-    function eliminarIndice(documento) {
-      let personaAeliminar = datos.find((persona) => persona.dni === documento);
-      let indiceAEliminar = datos.indexOf(personaAeliminar);
-      datos.splice(indiceAEliminar, 1);
-    }
-  } else if (option == 3) {
-    var documento = prompt("Ingrese el DNI de la persona que desea buscar: ");
-    buscarDocumento(documento);
-    function buscarDocumento(documento) {
-      let datoDevuelto = datos.find((Persona) => Persona.dni === documento);
-      console.log(datoDevuelto);
-    }
-  } else if (opcion == 4) {
-  } else {
-    console.log("Intente con otro valor, el ingresado no es valido");
-  }
-} while (option != 4);
+    e.preventDefault();
+  });
+
+document.getElementById("product-list").addEventListener("click", function (e) {
+  const ui = new UI();
+  ui.deletePersona(e.target);
+});
+
+function eliminar(a) {
+  document.getElementById(a).remove();
+}
