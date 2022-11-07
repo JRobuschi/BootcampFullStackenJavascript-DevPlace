@@ -1,0 +1,34 @@
+//esto es un coment
+
+{
+    "campo": "valor",
+    "otroCampo": "otroValor",
+    "numero": 4,
+    "objeto":{
+        "atributo1": "valor1",
+        "atributo2": "valor2"
+    },
+    "AB182JG":{
+        "marca": "Fiat",
+        "modelo": "Punto",
+        "transmision": "automatico"
+    },
+    //para array se usa []
+    "numeros": [
+        10, 4, 7 
+    ],
+    "autos":[
+        {
+            "AJZ879":{
+                "marca": "Fiat",
+                "modelo": "Punto",
+                "transmision": "automatico"
+            },
+            "BMQ222":{
+                "marca": "Audi",
+                "modelo": "A4",
+                "transmision": "manual"
+            }
+        }
+    ]
+}

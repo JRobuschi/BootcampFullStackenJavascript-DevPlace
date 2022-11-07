@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+:root {
+  --secundario: #ffcc80;
+  --secu-osc: #ca9b52;
+  --sec-claro: #ffffb0;
+  --principal: #ce93d8;
+  --prin-osc: #9c64a6;
+  --terciario: hsl(160, 70%, 75%);
+  --ter-osc: hsl(150, 60%, 65%);
+  --texto: hsl(291, 27%, 12%);
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--prin-osc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: antiquewhite;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+  letter-spacing: 1rem;
+  background-color: var(--ter-osc);
+  width: 100vw;
+  text-align: center;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 15px;
+  gap: 2rem;
+  height: 3rem;
+  list-style: none;
+  background-color: var(--secundario);
+  border: 3px solid var(--secu-osc);
+}
+li {
+  display: grid;
+  place-items: center;
+}
+li > svg {
+  fill: var(--texto);
+  transform: scale(1.2);
+}
+svg:hover {
+  cursor: pointer;
+}
+main {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+}
+.contacto {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--terciario);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  height: 5rem;
+  max-width: 900px;
+  position: relative;
+}
+.contacto > span {
+  color: var(--texto);
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: bold;
+  flex-basis: 1;
+  text-align: center;
+}
+.contacto > .borrar {
+  position: absolute;
+  right: 7rem;
+  top: -2rem;
+  background-color: var(--secu-osc);
+  border-radius: 50%;
+  display: none;
+  font-size: 2rem;
+  padding: 1.3rem;
+  width: 24px;
+  height: 24px;
+  transform: scale(1.2);
+}
+.contacto:hover > .borrar {
+  display: grid;
+  text-align: center;
+  place-content: center;
+}
+#editar:hover {
+  cursor: pointer;
+}
+.resultado {
+  position: absolute;
+  flex-direction: column;
+  height: 40vh;
+  width: 90%;
+  background-color: var(--prin-osc);
+  margin-top: 25vh;
+  border: 2px solid var(--principal);
+  border-radius: 15px;
+  z-index: 99;
+  display: none;
+}
+.resultado > a {
+  text-decoration: none;
+  background-color: var(--principal);
+  padding: 1.5rem;
+  border-radius: 15px;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
