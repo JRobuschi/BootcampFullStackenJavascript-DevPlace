@@ -1,0 +1,30 @@
+.intro{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    h1{
+        font-size: 3rem;
+        position: relative;
+        color:black;
+        z-index: 4;
+        span{
+            &:before{
+                content: "cycl";
+                color:var(--terciario);
+                background-color: var(--terciario);
+                width: 30%;
+                transform: skewY(-10deg);
+                position: absolute;
+                z-index: -3;
+                margin-left: 1rem;
+
+            }
+        }
+    }
+    p{
+        font-size: 2rem;
+    }
+}
