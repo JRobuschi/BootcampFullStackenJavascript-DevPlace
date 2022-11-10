@@ -1,9 +1,10 @@
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 import Monitores from "./Monitores";
 import Mouse from "./Mouse";
 import Teclado from "./Teclado";
 import Todos from "./Todos";
+import "./Productos.css";
 
 //import Sonnet from '../../components/Sonnet';
 

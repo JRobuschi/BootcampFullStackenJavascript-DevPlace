@@ -1,13 +1,12 @@
 import Monitores from "./Monitores";
 import Mouse from "./Mouse";
 import Teclado from "./Teclado";
+import "./Monitores.css";
 
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import React, { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-
-
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
 function DevolverTodo() {
   const productos = [
@@ -87,25 +86,27 @@ function DevolverTodo() {
       <Teclado />
 
       <Container className="d-flex justify-content-center mt-3">
-      <Button variant="primary" onClick={handleShow}>
-        Resumen
-      </Button>
+        <Button class="btn btn-outline-success" onClick={handleShow}>
+          Resumen
+        </Button>
 
-      <Modal count={count} onHide={handleClose}>
-        <Modal.Header className="d-flex" closeButton>
-          <Modal.Title >Todos los Productos</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{productos.map((element)=>(
-          <div key={element.id}>
-            <h5 className="text-center">{element.title}</h5>
-          </div>
-        ))}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Seguir viendo
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <Modal count={count} onHide={handleClose}>
+          <Modal.Header className="d-flex" closeButton>
+            <Modal.Title>Todos los Productos</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {productos.map((element) => (
+              <div key={element.id}>
+                <h5 className="text-center">{element.title}</h5>
+              </div>
+            ))}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button class="btn btn-outline-success" onClick={handleClose}>
+              Seguir viendo
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </>
   );
