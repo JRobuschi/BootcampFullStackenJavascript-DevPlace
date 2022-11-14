@@ -9,7 +9,7 @@ function BasicExample() {
         <h3 className="form__title">Inicia Sesión</h3>
         <p className="form__paragraph">
           No tienes una cuentas?{" "}
-          <a href="#" className="form__link">
+          <a href="/register" className="form__link">
             Entra aquí
           </a>
         </p>
@@ -21,6 +21,7 @@ function BasicExample() {
               id="name"
               className="form__input"
               placeholder=" "
+              required
             />
             <label for="name" class="form__label">
               Name:
@@ -36,6 +37,7 @@ function BasicExample() {
               id="user"
               className="form__input"
               placeholder=" "
+              required
             />
             <label for="user" class="form__label">
               User:
@@ -51,6 +53,7 @@ function BasicExample() {
               id="password"
               className="form__input"
               placeholder=" "
+              required
             />
             <label for="password" className="form__label">
               Password:

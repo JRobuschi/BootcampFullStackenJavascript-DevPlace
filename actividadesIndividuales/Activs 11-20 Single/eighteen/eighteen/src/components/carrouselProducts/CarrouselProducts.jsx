@@ -10,9 +10,11 @@ import { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const CarrouselProducts = () => {
+function CarrouselProducts() {
   var products = useContext(ProductsContext);
+
   const [selectProducts, setSelectProducts] = useState(products);
+
   return (
     <>
       <div className="container py-4 px-4 justify-content-center ">
@@ -36,8 +38,9 @@ const CarrouselProducts = () => {
             },
           }}
         >
-          <div className="products-container">
-            {selectProducts.map((obj, idx) => {
+          {/* <div className="products-container"> */}
+          {products &&
+            products.map((obj, idx) => {
               return (
                 <>
                   <SwiperSlide>
@@ -46,11 +49,11 @@ const CarrouselProducts = () => {
                 </>
               );
             })}
-          </div>
+          {/* </div> */}
         </Swiper>
       </div>
     </>
   );
-};
+}
 
 export default CarrouselProducts;

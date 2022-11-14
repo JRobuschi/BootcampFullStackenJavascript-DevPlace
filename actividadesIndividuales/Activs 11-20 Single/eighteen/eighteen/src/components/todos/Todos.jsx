@@ -9,8 +9,8 @@ import "./Todos.css";
 
 import { BsSearch } from "react-icons/bs";
 
-function AllProducts(props) {
-  var products = useContext(ProductsContext);
+function AllProducts() {
+  let products = useContext(ProductsContext);
   const [selectProducts, setSelectProducts] = useState(products);
 
   function filterProducts(e) {
@@ -64,13 +64,14 @@ function AllProducts(props) {
         </div>
 
         <div className="products-container">
-          {selectProducts.map((obj, idx) => {
-            return (
-              <>
-                <Cards obj={obj} key={idx} />
-              </>
-            );
-          })}
+          {selectProducts &&
+            selectProducts.map((obj, idx) => {
+              return (
+                <>
+                  <Cards obj={obj} key={idx} />
+                </>
+              );
+            })}
         </div>
       </div>
     </>

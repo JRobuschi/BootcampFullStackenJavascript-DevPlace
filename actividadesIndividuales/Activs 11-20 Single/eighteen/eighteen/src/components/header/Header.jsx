@@ -13,7 +13,7 @@ const Header = (props) => {
           ELECTRO_SHOP
         </Navbar.Brand>
         <Nav className="ms-auto me-5">
-          <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/products">Products</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/register" onClick={selectSection}>

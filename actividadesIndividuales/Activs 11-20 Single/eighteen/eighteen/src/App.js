@@ -1,9 +1,9 @@
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Productos from "./components/productos/Productos";
+//import Productos from "./components/productos/Productos";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
 import Todos from "./components/todos/Todos";
 import Carrousel from "./components/carrousel/Carrousel";
@@ -20,12 +20,15 @@ function App() {
 
   const [products, setProducts] = useState();
 
-  function readProducts() {
-    fetch("products.json")
+  useEffect(() => {
+    readProducts();
+  }, []);
+
+  async function readProducts() {
+    await fetch("products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }
-  readProducts();
 
   return (
     <>
@@ -34,9 +37,9 @@ function App() {
         <ProductsContext.Provider value={products}>
           <Routes>
             <Route path="/" element={<Carrousel />} />
-            <Route path="products" element={<Todos />} />
-            <Route path="login" element={<Forms />} />
-            <Route path="register" element={<Forms />} />
+            <Route path="/products" element={<Todos />} />
+            <Route path="/login" element={<Forms />} />
+            <Route path="/register" element={<Forms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ProductsContext.Provider>
