@@ -4,8 +4,8 @@ import "./footer.css";
 export default function Footer() {
   return (
     <footer>
-      <h3>CHALLENGE</h3>
-      <p>Diseñado por @JuanCruzRobuschi</p>
+      <h4>ELECTRO_SHOP</h4>
+      <p>© 2020 Copyright: Robuschi Juan Cruz</p>
     </footer>
   );
 }

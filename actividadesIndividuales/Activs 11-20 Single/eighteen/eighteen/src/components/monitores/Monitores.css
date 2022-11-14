@@ -1,0 +1,42 @@
+.main {
+  background: rgb(200, 200, 200);
+}
+
+.monitores-container {
+  background: rgb(200, 200, 200);
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+
+.monitores-container h1 {
+  color: #fff;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) =======================*/
+@media screen and (max-width: 1300px) {
+  .products-container {
+    grid-template-columns: 33% 34% 33%;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 1000px) {
+  .products-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/* =================== MEDIA QUERIES (SMALL DEVICES) =======================*/
+
+@media screen and (max-width: 650px) {
+  .products-container {
+    grid-template-columns: 100%;
+  }
+}

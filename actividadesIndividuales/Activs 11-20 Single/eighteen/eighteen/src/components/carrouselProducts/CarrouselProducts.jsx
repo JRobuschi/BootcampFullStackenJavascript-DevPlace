@@ -1,0 +1,56 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import Cards from "../cards/Cards";
+import { useContext } from "react";
+import { ProductsContext } from "../../App";
+import { useState } from "react";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const CarrouselProducts = () => {
+  var products = useContext(ProductsContext);
+  const [selectProducts, setSelectProducts] = useState(products);
+  return (
+    <>
+      <div className="container py-4 px-4 justify-content-center ">
+        <Swiper
+          freeMode={true}
+          grabCursor={true}
+          modules={[FreeMode]}
+          className="mySwiper"
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+            1230: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
+        >
+          <div className="products-container">
+            {selectProducts.map((obj, idx) => {
+              return (
+                <>
+                  <SwiperSlide>
+                    <Cards obj={obj} key={idx} />
+                  </SwiperSlide>
+                </>
+              );
+            })}
+          </div>
+        </Swiper>
+      </div>
+    </>
+  );
+};
+
+export default CarrouselProducts;
