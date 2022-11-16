@@ -14,22 +14,17 @@ function Cart(props) {
   }, [props.changes]);
 
   return (
-    <div className="wrapper">
-      <h2>Carrito</h2>
-      <div className="cart">
-        <div className="cart-head">
-          <h3>Articulo</h3>
-          <h3>Cantidad</h3>
-          <h3>Precio</h3>
-        </div>
+    <div className="myCart__container">
+      <h2>My Cart</h2>
+      <div className="cart__container">
         <div className="cart-body">
           {props.cart.map((obj, idx) => {
             return (
               <CardCart
                 obj={obj}
                 key={idx}
-                // removeFromCart={props.removeFromCart}
-                // multiplyProductInCart={props.multiplyProductInCart}
+                removeFromCart={props.removeFromCart}
+                multiplyProductInCart={props.multiplyProductInCart}
               />
             );
           })}

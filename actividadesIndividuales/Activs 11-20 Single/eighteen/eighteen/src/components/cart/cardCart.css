@@ -1,0 +1,8 @@
+.cart__item {
+  display: flex;
+  border: solid 1px black;
+}
+
+.cart__item img {
+  width: 10%;
+}

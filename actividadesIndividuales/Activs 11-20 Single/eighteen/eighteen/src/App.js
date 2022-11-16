@@ -33,10 +33,36 @@ function App() {
     setCart(order);
   }
 
-  // function removeCart(e){
-  //   let products = cart;
-  //   let indProduct = e.target.parentElement.parentElement.firstChild.textContent;
-  // }
+  function removeCart(e) {
+    let products = cart;
+    //Revisar en que linea esta
+    let indProduct =
+      e.target.parentElement.parentElement.firstChild.textContent;
+    let selectObj = products.find((e) => e.title === indProduct);
+    let selectInd = products.indexOf(selectObj);
+    selectObj.quantity = selectObj.quantity - 1;
+    if (selectObj.quantity <= 0) {
+      products.splice(selectInd, 1);
+    } else {
+      products.splice(selectInd, 1, selectObj);
+    }
+    setCart(products);
+    changes ? setChanges(false) : setChanges(true);
+  }
+
+  function moreProductCart(e) {
+    let products = cart;
+    let indName = e.target.parentElement.parentElement.firstChild.textContent;
+    let selectObj = products.findIndex((e) => e.title === indName);
+    if (products.includes(selectObj)) {
+      let productInd = products.indexOf(selectObj);
+      products[productInd].quantity++;
+    } else {
+      products.push(selectObj);
+    }
+    setCart(products);
+    changes ? setChanges(false) : setChanges(true);
+  }
 
   useEffect(() => {
     readProducts();
@@ -58,7 +84,15 @@ function App() {
             <Route path="/products" element={<Todos />} />
             <Route
               path="/cart"
-              element={<Cart changes={changes} cart={cart} setCart={setCart} />}
+              element={
+                <Cart
+                  changes={changes}
+                  cart={cart}
+                  setCart={setCart}
+                  removeCart={removeCart}
+                  moreProductCart={moreProductCart}
+                />
+              }
             />
             <Route
               path="/productsDetail/:id"

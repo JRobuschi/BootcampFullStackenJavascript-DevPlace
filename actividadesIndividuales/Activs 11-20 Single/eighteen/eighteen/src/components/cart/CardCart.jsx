@@ -1,18 +1,20 @@
 import React from "react";
+import "./cardCart.css";
 
 function CartItem(props) {
   return (
-    <div className="cart-item">
+    <div className="cart__item">
+      <img src={props.obj.img} alt="" />
       <h4>{props.obj.title}</h4>
-      {/* <div>
-        <span className="cart-btn add" onClick={props.multiplyProductInCart}>
+      <div>
+        <span className="cart__btn add" onClick={props.multiplyProductInCart}>
           +
         </span>
         <span>{props.obj.quantity}</span>
-        <span className="cart-btn take" onClick={props.removeFromCart}>
+        <span className="cart__btn take" onClick={props.removeFromCart}>
           -
         </span>
-      </div> */}
+      </div>
       <span>{props.obj.price}</span>
     </div>
   );
