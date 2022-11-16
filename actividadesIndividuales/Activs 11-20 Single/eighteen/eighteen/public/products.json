@@ -2,6 +2,7 @@
     "id": 0,
     "title": "monitor Lenovo",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "monitor"
 },
@@ -9,12 +10,14 @@
     "id": 1,
     "title": "monitor sony",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "monitor"
 },{ 
     "id": 2,
     "title": "monitor samsung",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "monitor"
 },
@@ -22,6 +25,7 @@
     "id": 3,
     "title": "monitor xiaomi",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "monitor"
 },
@@ -29,6 +33,7 @@
     "id": 4,
     "title": "mouse Lenovo",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "mouse"
 },
@@ -37,6 +42,7 @@
     "id": 5,
     "title": "mouse sony",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "mouse"
 },
@@ -44,6 +50,7 @@
     "id": 6,
     "title": "mouse samsung",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "mouse"
 },
@@ -51,6 +58,7 @@
     "id": 7,
     "title": "mouse xiaomi",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "mouse"
 },
@@ -58,6 +66,7 @@
     "id": 8,
     "title": "teclado lenovo",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "teclado"
 },
@@ -65,6 +74,7 @@
     "id": 9,
     "title": "teclado sony",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "teclado"
 },
@@ -72,6 +82,7 @@
     "id": 10,
     "title": "teclado samsung",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "teclado"
 },
@@ -79,6 +90,7 @@
     "id": 11,
     "title": "teclado xiaomi",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
     "price": "$140000",
     "type" : "teclado"
 }

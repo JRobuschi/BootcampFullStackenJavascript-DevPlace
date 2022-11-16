@@ -2,6 +2,7 @@ import React from "react";
 import "../monitores/Monitores.css";
 import "./Cards.css";
 import { Button, Card, Row, Col } from "react-bootstrap/";
+import { Link } from "react-router-dom";
 
 function BasicExample(props) {
   return (
@@ -22,9 +23,9 @@ function BasicExample(props) {
                   </Card.Title>
                   <hr />
                   <Card.Text>${props.obj.price}</Card.Text>
-                  <Button className="w-100" class="btn btn-outline-success">
-                    Comprar
-                  </Button>
+                  <Link to={`/productsDetail/${props.obj.id}`}>
+                    <Button className="w-100 btn">Ver Detalle</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
