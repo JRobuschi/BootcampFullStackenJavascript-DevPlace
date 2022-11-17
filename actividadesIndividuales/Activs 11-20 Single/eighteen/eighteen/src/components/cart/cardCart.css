@@ -1,8 +1,17 @@
 .cart__item {
   display: flex;
   border: solid 1px black;
+  margin: 30px 50px;
 }
 
 .cart__item img {
   width: 10%;
+}
+
+.cart__add {
+  font-size: 2rem;
+}
+
+.cart__remove {
+  font-size: 2rem;
 }

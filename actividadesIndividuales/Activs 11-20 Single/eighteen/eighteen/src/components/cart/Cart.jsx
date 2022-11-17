@@ -4,6 +4,7 @@ import CardCart from "./CardCart";
 
 function Cart(props) {
   const [totalPrice, setTotalPrice] = useState(0);
+  const [stage, setStage] = useState(1);
 
   useEffect(() => {
     let total = 0;
@@ -23,13 +24,13 @@ function Cart(props) {
               <CardCart
                 obj={obj}
                 key={idx}
-                removeFromCart={props.removeFromCart}
-                multiplyProductInCart={props.multiplyProductInCart}
+                removeCart={props.removeCart}
+                moreProductCart={props.moreProductCart}
               />
             );
           })}
         </div>
-        <div className="cart-foot">
+        <div className="cart__footer">
           <h5>total</h5>
           <span>{totalPrice}</span>
         </div>

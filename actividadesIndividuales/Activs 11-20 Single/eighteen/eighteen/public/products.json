@@ -3,6 +3,7 @@
     "title": "monitor Lenovo",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "monitor"
 },
@@ -11,6 +12,7 @@
     "title": "monitor sony",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "monitor"
 },{ 
@@ -18,6 +20,7 @@
     "title": "monitor samsung",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "monitor"
 },
@@ -26,6 +29,7 @@
     "title": "monitor xiaomi",
     "img": "https://www.lenovo.com/medias/23073683046-73368-20201123120156.png?context=bWFzdGVyfHJvb3R8MTYzMDc5fGltYWdlL3BuZ3xoYjEvaDg5LzExODExMjYwMzM0MTEwLnBuZ3w5MGI4MjlkYzc5MWRiN2MwMDE1NTYzNTgwOTg2ZTU0MjgxZDI4ZDc2YTMxMTI4YzA5YzVhNjlhNDUwZjUzMDhj",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "monitor"
 },
@@ -34,6 +38,7 @@
     "title": "mouse Lenovo",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "mouse"
 },
@@ -43,6 +48,7 @@
     "title": "mouse sony",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "mouse"
 },
@@ -51,6 +57,7 @@
     "title": "mouse samsung",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "mouse"
 },
@@ -59,6 +66,7 @@
     "title": "mouse xiaomi",
     "img": "https://www.lenovo.com/medias/GY50X79384-01-500x400.png?context=bWFzdGVyfHJvb3R8ODM3MDJ8aW1hZ2UvcG5nfGgxMy9oNjEvMTEwNDUxMTk1OTA0MzAucG5nfGMxOWM4YmRlOTI5YjhkMWQ2NTU1ZDE2ODQ4MGJiZDVjMDMyMjMzMjNlNWVmMzcyNmMxODI1MTcyZTc3ZGU3OWE",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "mouse"
 },
@@ -67,6 +75,7 @@
     "title": "teclado lenovo",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "teclado"
 },
@@ -83,6 +92,7 @@
     "title": "teclado samsung",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "teclado"
 },
@@ -91,6 +101,7 @@
     "title": "teclado xiaomi",
     "img": "https://ar.wiautomation.com/public/images/landing/anticipa/product/6FC52030AF200AA1.jpg",
     "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugit cumque, eos qui molestiae pariatur molestias! Nam velit cum exercitationem mollitia natus cumque magnam at?",
+    "quantity":1,
     "price": "$140000",
     "type" : "teclado"
 }
