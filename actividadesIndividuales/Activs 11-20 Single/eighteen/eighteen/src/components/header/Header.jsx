@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap/";
 import "./Header.css";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = (props) => {
   function selectSection(e) {
@@ -18,6 +19,9 @@ const Header = (props) => {
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/register" onClick={selectSection}>
             Register
+          </Nav.Link>
+          <Nav.Link href="/cart">
+            <AiOutlineShoppingCart />
           </Nav.Link>
         </Nav>
       </Navbar>

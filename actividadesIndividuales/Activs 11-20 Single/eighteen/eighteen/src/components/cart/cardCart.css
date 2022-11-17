@@ -1,17 +1,27 @@
-.cart__item {
-  display: flex;
-  border: solid 1px black;
-  margin: 30px 50px;
+.container__li {
+  margin: 20px 30px;
 }
-
-.cart__item img {
+.conteiner__product {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.carrito-card-title:first-letter {
+  text-transform: uppercase;
+}
+.container__product img {
   width: 10%;
 }
-
-.cart__add {
+.container__img {
+  width: 10%;
+}
+.conteiner__product button {
   font-size: 2rem;
+  padding: 0px;
+  background: transparent;
+  color: black;
 }
 
-.cart__remove {
-  font-size: 2rem;
+#container__delete {
+  color: red;
 }

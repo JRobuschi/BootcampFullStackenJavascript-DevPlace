@@ -4,11 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import { ProductsContext } from "../../App";
 import "./productDetail.css";
 
+import { useCart } from "react-use-cart";
+
 const Product = (props) => {
   let allProducts = useContext(ProductsContext);
   let params = useParams();
   //Buscamos el elemento con el find
   let element = allProducts.find((e) => e.id == params.id);
+
+  //Prueba nueva
+  const { addItem } = useCart();
 
   return (
     <>
@@ -29,14 +34,9 @@ const Product = (props) => {
             <button>Seguir comprando</button>
           </Link>
           <Link>
-            <button
-              onClick={() => {
-                props.addCart(element);
-              }}
-            >
-              Agregar al carrito
-            </button>
+            <button onClick={() => addItem(element)}>Add to cart</button>
           </Link>
+          ;
           <Link to="/cart">
             <button>Ir al carrito</button>
           </Link>

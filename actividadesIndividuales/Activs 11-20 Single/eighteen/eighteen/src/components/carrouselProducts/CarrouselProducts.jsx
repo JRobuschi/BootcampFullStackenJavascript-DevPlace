@@ -38,18 +38,18 @@ function CarrouselProducts() {
             },
           }}
         >
-          {/* <div className="products-container"> */}
-          {products &&
-            products.map((obj, idx) => {
-              return (
-                <>
-                  <SwiperSlide>
-                    <Cards obj={obj} key={idx} />
-                  </SwiperSlide>
-                </>
-              );
-            })}
-          {/* </div> */}
+          <div className="products-container">
+            {products &&
+              products.map((obj, idx) => {
+                return (
+                  <>
+                    <SwiperSlide>
+                      <Cards obj={obj} key={idx} />
+                    </SwiperSlide>
+                  </>
+                );
+              })}
+          </div>
         </Swiper>
       </div>
     </>
