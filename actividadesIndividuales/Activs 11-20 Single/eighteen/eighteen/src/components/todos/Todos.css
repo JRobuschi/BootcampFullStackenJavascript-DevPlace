@@ -68,3 +68,12 @@ li:hover {
   align-items: center;
   display: flex;
 }
+
+@media (max-width: 675px) {
+  .ul-container {
+    gap: 1rem;
+  }
+  .ul-container ul {
+    margin: 10px;
+  }
+}

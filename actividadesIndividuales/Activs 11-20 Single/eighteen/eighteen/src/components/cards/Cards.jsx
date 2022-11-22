@@ -7,12 +7,13 @@ import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { ProductsContext } from "../../App";
 import { useContext } from "react";
+import { GrFavorite } from "react-icons/gr";
 
 function BasicExample(props) {
   const products = useContext(ProductsContext);
   let params = useParams();
   let element = products.find((e) => e.id === params.id);
-  const { addItem } = useCart();
+
   return (
     <div className="main">
       <div className="monitores-container ">
@@ -30,18 +31,10 @@ function BasicExample(props) {
                     {props.obj.title}
                   </Card.Title>
                   <hr />
-                  <Card.Text>${props.obj.price}</Card.Text>
+                  <Card.Text>{props.obj.price}</Card.Text>
                   <Link to={`/productsDetail/${props.obj.id}`}>
                     <Button className="w-100 btn">Ver Detalle</Button>
                   </Link>
-                  {/* <Link>
-                    <Button
-                      className="w-100 btn"
-                      onClick={() => addItem(element)}
-                    >
-                      Add to cart
-                    </Button>
-                  </Link> */}
                 </Card.Body>
               </Card>
             </Col>

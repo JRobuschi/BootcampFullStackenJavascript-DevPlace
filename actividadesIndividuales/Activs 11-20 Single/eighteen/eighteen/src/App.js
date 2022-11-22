@@ -10,8 +10,9 @@ import Carrousel from "./components/carrousel/Carrousel";
 import Forms from "./components/forms/Forms";
 import ProductsDetail from "./components/productDetail/ProductDetail";
 import Cart from "./components/cart/Cart";
+import Register from "./components/forms/Register";
 
-//import Preguntas from "../preguntas/Preguntas";
+import Faq from "./components/preguntas/Preguntas";
 import NotFound from "./components/notFound/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -45,7 +46,8 @@ function App() {
               <Route path="/cart" element={<Cart />} />
 
               <Route path="/login" element={<Forms />} />
-              <Route path="/register" element={<Forms />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/faq" element={<Faq />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </ProductsContext.Provider>

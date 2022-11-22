@@ -1,5 +1,6 @@
-.div__container {
-  height: 88vh;
+.product__container {
+  background: rgb(200, 200, 200);
+  height: 74vh;
 }
 
 .product__container {
@@ -30,8 +31,9 @@
 
 .buttons__container {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 .buttons__container button {

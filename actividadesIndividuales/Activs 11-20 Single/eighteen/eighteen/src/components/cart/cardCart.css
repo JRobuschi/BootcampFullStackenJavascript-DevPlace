@@ -25,3 +25,13 @@
 #container__delete {
   color: red;
 }
+
+.div__container {
+  background: rgb(200, 200, 200);
+  min-height: 85vh;
+  padding-bottom: 30px;
+}
+
+#empty__container {
+  height: 84vh;
+}

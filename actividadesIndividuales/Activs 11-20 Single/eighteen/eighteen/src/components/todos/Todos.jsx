@@ -33,7 +33,6 @@ function AllProducts() {
 
   return (
     <>
-      <CarrouselProducts />
       <div className="div-general-container">
         <div>
           <ul className="ul-container">
@@ -73,6 +72,7 @@ function AllProducts() {
               );
             })}
         </div>
+        <CarrouselProducts />
       </div>
     </>
   );

@@ -25,3 +25,10 @@
 .card {
   box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.65);
 }
+
+.fav__container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 8px;
+  font-size: 1.3;
+}

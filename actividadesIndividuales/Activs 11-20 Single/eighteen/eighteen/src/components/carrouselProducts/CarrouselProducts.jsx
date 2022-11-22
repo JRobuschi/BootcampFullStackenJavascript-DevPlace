@@ -17,40 +17,43 @@ function CarrouselProducts() {
 
   return (
     <>
-      <div className="container py-4 px-4 justify-content-center ">
-        <Swiper
-          freeMode={true}
-          grabCursor={true}
-          modules={[FreeMode]}
-          className="mySwiper"
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            700: {
-              slidesPerView: 2,
-              spaceBetween: 50,
-            },
-            1230: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }}
-        >
-          <div className="products-container">
-            {products &&
-              products.map((obj, idx) => {
-                return (
-                  <>
-                    <SwiperSlide>
-                      <Cards obj={obj} key={idx} />
-                    </SwiperSlide>
-                  </>
-                );
-              })}
-          </div>
-        </Swiper>
+      <div className="all__container">
+        <div className="container py-4 px-4 justify-content-center ">
+          <h2>Ofertas</h2>
+          <Swiper
+            freeMode={true}
+            grabCursor={true}
+            modules={[FreeMode]}
+            className="mySwiper"
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              700: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1230: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            <div className="products-container">
+              {products &&
+                products.map((obj, idx) => {
+                  return (
+                    <>
+                      <SwiperSlide>
+                        <Cards obj={obj} key={idx} />
+                      </SwiperSlide>
+                    </>
+                  );
+                })}
+            </div>
+          </Swiper>
+        </div>
       </div>
     </>
   );
