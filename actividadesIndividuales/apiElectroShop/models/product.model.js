@@ -12,10 +12,18 @@ var Products = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: { type: Sequelize.DataTypes.STRING },
-    description: { type: Sequelize.DataTypes.STRING },
-    stock: { type: Sequelize.DataTypes.INTEGER },
-    price: { type: Sequelize.DataTypes.INTEGER },
+    title: {
+      type: Sequelize.DataTypes.STRING,
+    },
+    description: {
+      type: Sequelize.DataTypes.STRING,
+    },
+    stock: {
+      type: Sequelize.DataTypes.INTEGER,
+    },
+    price: {
+      type: Sequelize.DataTypes.INTEGER,
+    },
     // image: { type: Sequelize.DataTypes.TEXT },
   }
   // {
