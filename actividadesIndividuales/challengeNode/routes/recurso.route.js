@@ -15,7 +15,7 @@ recurso.get("/", getRecurso);
 recurso.get("/:id", findByRecurso);
 recurso.post("/login/create", createRecurso);
 recurso.put("/login/update/:id", UpdateByRecurso);
-recurso.delete("admin//update/:id", deleteByRecurso);
+recurso.delete("/admin/delete/:id", deleteByRecurso);
 
 recurso.post("/login", function (req, res) {
   let body = req.body;
