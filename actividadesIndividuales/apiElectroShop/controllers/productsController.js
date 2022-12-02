@@ -1,7 +1,9 @@
-var Products = require("../models/product.model");
+var { Products } = require("../models/product.model");
 
 const getProduct = async (req, res) => {
-  const response = await Products.findAll()
+  const response = await Products.findAll({
+    include: ["categories"],
+  })
     .then((data) => {
       const res = { error: false, data: data };
       return res;
@@ -15,13 +17,20 @@ const getProduct = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
+    if (req.file === null) {
+      return res.status(400).send({ message: "No file was uploaded" });
+    }
+    console.log(req.body);
+    const url = req.protocol + "://" + req.get("host");
+    const rutaImg = url + "/upload/" + req.file.filename;
+
     const modelData = {
       price: req.body.price,
-
       title: req.body.title,
-      stock: req.body.stock,
-      // image: req.body.image,
       description: req.body.description,
+      stock: req.body.stock,
+      image: rutaImg,
+      Category: req.body.Category,
     };
     const response = await Products.create(modelData)
       .then((data) => {
@@ -49,6 +58,7 @@ const getByIdProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const response = await Products.findAll({
+      include: ["categories"],
       where: { id: id },
     })
       .then((data) => {

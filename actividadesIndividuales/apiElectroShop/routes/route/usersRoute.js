@@ -1,4 +1,5 @@
 const express = require("express");
+
 const users = express.Router();
 const {
   getUsers,
@@ -6,6 +7,7 @@ const {
   findByUser,
   UpdateByUser,
   deleteByUser,
+  loginUser,
 } = require("../../controllers/usersControllers");
 const { ValidateUser } = require("../../models/user.model");
 
@@ -15,5 +17,5 @@ users.post("/", ValidateUser, createUser);
 users.get("/:id", findByUser);
 users.put("/:id", UpdateByUser);
 users.delete("/:id", deleteByUser);
-
+users.post("/login", loginUser);
 module.exports = users;

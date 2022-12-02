@@ -24,7 +24,7 @@ var Products = sequelize.define(
     price: {
       type: Sequelize.DataTypes.INTEGER,
     },
-    // image: { type: Sequelize.DataTypes.TEXT },
+    image: { type: Sequelize.DataTypes.TEXT },
   }
   // {
   //   classMethods: {
@@ -45,6 +45,11 @@ var Products = sequelize.define(
 const ValidateProducts = (req, res, next) => {
   const schema = Joi.object({
     title: Joi.string().min(5).max(100).required().messages({
+      "string.empty": "Ingresa el Nombre  del producto",
+      "string.min": "El nombre del producto debe ser mayor a 5 caracteres",
+      "any.required": "Ingresa el Nombre  del producto",
+    }),
+    description: Joi.string().min(5).max(100).required().messages({
       "string.empty": "Ingresa el Nombre  del producto",
       "string.min": "El nombre del producto debe ser mayor a 5 caracteres",
       "any.required": "Ingresa el Nombre  del producto",

@@ -14,7 +14,7 @@ const { ValidateProducts } = require("../../models/product.model");
 product.get("/", getProduct);
 product.post(
   "/",
-
+  [uploadMulter.single("image"), ValidateProducts],
   createProduct
 );
 product.get("/:id", getByIdProduct);

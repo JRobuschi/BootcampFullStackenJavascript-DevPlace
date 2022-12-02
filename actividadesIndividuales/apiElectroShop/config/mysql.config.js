@@ -1,12 +1,13 @@
+require("dotenv").config();
 var Sequelize = require("sequelize");
 var sequelize = new Sequelize(
-  "mydb",
-  "root", //nombre
-  "root", //password
+  process.env.DATABASE,
+  process.env.DATABASE_USER, //nombre
+  process.env.DATABASE_PASSWORD, //password
   {
-    host: "localhost",
-    dialect: "mysql",
-    port: 3306,
+    host: process.env.DATABASE_HOST,
+    dialect: process.env.DATABASE_DIALECT,
+    port: process.env.DATABASE_PORT,
   }
 );
 
@@ -16,5 +17,3 @@ var db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 module.exports = db;
-
-//module.exports = databaseMysql;

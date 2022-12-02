@@ -14,6 +14,7 @@ var User = sequelize.define(
     },
     username: {
       type: Sequelize.DataTypes.STRING,
+      unique: true,
     },
     email: {
       type: Sequelize.DataTypes.STRING,
@@ -34,11 +35,6 @@ var User = sequelize.define(
         unique: true,
       },
     ],
-    defaultScope: {
-      attributes: {
-        exclude: ["password"],
-      },
-    },
   }
 );
 
