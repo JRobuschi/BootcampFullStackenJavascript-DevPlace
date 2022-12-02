@@ -1,25 +1,29 @@
+//Principal Imports
+import React, { useState, createContext, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//Boostrap Imports
+import "bootstrap/dist/css/bootstrap.min.css";
+import { CartProvider } from "react-use-cart";
+
+//My Personals Imports
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-//import Productos from "./components/productos/Productos";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import React, { useState, createContext, useEffect } from "react";
-
 import Todos from "./components/todos/Todos";
 import Carrousel from "./components/carrousel/Carrousel";
 import Forms from "./components/forms/Forms";
 import ProductsDetail from "./components/productDetail/ProductDetail";
 import Cart from "./components/cart/Cart";
 import Register from "./components/forms/Register";
-
+import ProductForm from "./components/forms/ProductsForm";
 import Faq from "./components/preguntas/Preguntas";
 import NotFound from "./components/notFound/NotFound";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { CartProvider } from "react-use-cart";
 export const ProductsContext = createContext();
 
+//functionaliti App
 function App() {
+  //Api connect
   const [products, setProducts] = useState();
 
   useEffect(() => {
@@ -27,11 +31,12 @@ function App() {
   }, []);
 
   async function readProducts() {
-    await fetch("products.json")
+    await fetch("http://localhost:3030/")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }
 
+  //Visual page
   return (
     <>
       <CartProvider>
@@ -47,6 +52,7 @@ function App() {
 
               <Route path="/login" element={<Forms />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/addProduct" element={<ProductForm />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

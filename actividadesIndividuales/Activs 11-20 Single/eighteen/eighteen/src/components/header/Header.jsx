@@ -16,6 +16,7 @@ const Header = (props) => {
         <Nav className="nav-list ms-auto me-5">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/products">Products</Nav.Link>
+          <Nav.Link href="/addProduct">Add Products</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/register" onClick={selectSection}>
             Register

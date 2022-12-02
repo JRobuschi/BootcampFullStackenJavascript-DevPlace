@@ -72,7 +72,7 @@ function AllProducts() {
               );
             })}
         </div>
-        <CarrouselProducts />
+        {/* <CarrouselProducts /> */}
       </div>
     </>
   );
