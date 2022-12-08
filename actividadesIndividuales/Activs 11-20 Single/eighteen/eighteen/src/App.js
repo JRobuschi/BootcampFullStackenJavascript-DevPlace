@@ -24,17 +24,29 @@ export const ProductsContext = createContext();
 //functionaliti App
 function App() {
   //Api connect
-  const [products, setProducts] = useState();
+  const [status, setStatus] = useState("initial");
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     readProducts();
   }, []);
 
-  async function readProducts() {
-    await fetch("http://localhost:3030/")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }
+  // async function readProducts() {
+  //   await fetch("http://localhost:3030/product")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // }
+  const readProducts = async () => {
+    try {
+      const getProduct = await fetch("http://localhost:3030/product").then(
+        (response) => response.json()
+      );
+      setStatus("done");
+      setProducts(getProduct);
+    } catch (err) {
+      setStatus("error");
+    }
+  };
 
   //Visual page
   return (
@@ -42,12 +54,12 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <Header />
-          <ProductsContext.Provider value={products}>
+          <ProductsContext.Provider value={(status, products)}>
             <Routes>
               <Route path="/" element={<Carrousel />} />
               <Route path="/products" element={<Todos />} />
 
-              <Route path="/productsDetail/:id" element={<ProductsDetail />} />
+              <Route path="/product/:id" element={<ProductsDetail />} />
               <Route path="/cart" element={<Cart />} />
 
               <Route path="/login" element={<Forms />} />

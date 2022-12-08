@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.img__container {
+#img__container {
   display: flex;
   justify-content: center;
   width: 50%;

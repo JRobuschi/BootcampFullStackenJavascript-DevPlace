@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import "./preguntas.css";
+import { ListComponent } from "../list/List";
 
 export default function App() {
   const data = {
