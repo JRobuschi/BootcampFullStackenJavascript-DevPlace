@@ -10,6 +10,7 @@ const {
   loginUser,
 } = require("../../controllers/usersControllers");
 const { ValidateUser } = require("../../models/user.model");
+const ValidateToken = require("../../middlewares/validateToken");
 
 /**Get all users */
 users.get("/", getUsers);
