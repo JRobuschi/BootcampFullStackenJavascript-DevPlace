@@ -1,0 +1,15 @@
+.addproduct__container {
+  min-height: 82vh;
+  background-image: url("https://fondosmil.com/fondo/25777.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 60px;
+  min-height: 89vh;
+}
+.addproduct__container h2 {
+  color: rgb(136, 137, 139);
+  padding: 30px;
+}
+#form {
+  max-width: 100%;
+}
