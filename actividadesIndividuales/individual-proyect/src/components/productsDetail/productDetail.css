@@ -1,0 +1,72 @@
+.div__container {
+  background-image: url("https://fondosmil.com/fondo/25777.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 60px;
+  min-height: 96vh;
+  color: white;
+}
+
+.product__container {
+  height: 74vh;
+  justify-content: space-evenly;
+}
+
+.product__container {
+  display: flex;
+  align-items: center;
+}
+
+.img__container {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+}
+
+#letras__container {
+  text-align: center;
+  color: #fff;
+}
+
+.letras__container p {
+  margin: 0 20% 0 20%;
+  margin-bottom: 1.5rem;
+}
+
+.letras__container h2 {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.buttons__container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.buttons__container button {
+  color: white;
+  background: transparent;
+  border: 2px solid rgb(44, 74, 90);
+  border-radius: 6px;
+  padding: 4px 4px;
+}
+
+.buttons__container button:hover {
+  color: white;
+  background: rgb(44, 74, 90);
+  -webkit-transition-duration: 0.6s;
+  /* transition: 0.6s; */
+  font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .product__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .img__container img {
+    width: 40vh;
+  }
+}

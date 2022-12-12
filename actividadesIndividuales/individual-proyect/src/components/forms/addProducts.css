@@ -4,8 +4,13 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-bottom: 60px;
-  min-height: 89vh;
+  min-height: 96vh;
 }
+
+.addproduct__container form {
+  margin-top: 60px;
+}
+
 .addproduct__container h2 {
   color: rgb(136, 137, 139);
   padding: 30px;

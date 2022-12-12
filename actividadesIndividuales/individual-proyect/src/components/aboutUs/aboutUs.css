@@ -1,0 +1,23 @@
+.aboutUs__container {
+  background-image: url("https://fondosmil.com/fondo/25777.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 60px;
+  min-height: 96vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutUs__title {
+  color: #fff;
+  font-family: cursive;
+  margin-bottom: 3rem;
+}
+.aboutUs__text {
+  color: white;
+  font-family: cursive;
+  width: 40%;
+}

@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import storeItems from "../data/items.json";
 import { ShoppingCart } from "../components/cart/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 const ShoppingCartContext = createContext({});
@@ -20,17 +19,19 @@ export function ShoppingCartProvider({ children }) {
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
-  function getItemQuantity(id) {
-    return cartItems.find((item) => item.id === id)?.quantity || 0;
+  function getItemQuantity(idProduct) {
+    return (
+      cartItems.find((item) => item.idProduct === idProduct)?.quantity || 0
+    );
   }
 
-  function increaseCartQuantity(id) {
+  function increaseCartQuantity(idProduct) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id) == null) {
-        return [...currItems, { id, quantity: 1 }];
+      if (currItems.find((item) => item.idProduct === idProduct) == null) {
+        return [...currItems, { idProduct, quantity: 1 }];
       } else {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.idProduct === idProduct) {
             return { ...item, quantity: item.quantity + 1 };
           } else {
             return item;
@@ -40,13 +41,15 @@ export function ShoppingCartProvider({ children }) {
     });
   }
 
-  function decreaseCartQuantity(id) {
+  function decreaseCartQuantity(idProduct) {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === id)?.quantity === 1) {
-        return currItems.filter((item) => item.id !== id);
+      if (
+        currItems.find((item) => item.idProduct === idProduct)?.quantity === 1
+      ) {
+        return currItems.filter((item) => item.idProduct !== idProduct);
       } else {
         return currItems.map((item) => {
-          if (item.id === id) {
+          if (item.idProduct === idProduct) {
             return { ...item, quantity: item.quantity - 1 };
           } else {
             return item;
@@ -56,9 +59,9 @@ export function ShoppingCartProvider({ children }) {
     });
   }
 
-  function removeFromCart(id) {
+  function removeFromCart(idProduct) {
     setCartItems((currItems) => {
-      return currItems.filter((item) => item.id !== id);
+      return currItems.filter((item) => item.idProduct !== idProduct);
     });
   }
 

@@ -10,16 +10,24 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="/">Luis Viton</Navbar.Brand>
+        <Navbar.Brand href="/" style={{ fontFamily: "cursive" }}>
+          Luis Viton
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
             <NavDropdown title="Products" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Fragance</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Sunglasses</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Wristwatch</NavDropdown.Item>
+              <NavDropdown.Item href="/store/fragance">
+                Fragance
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/store/sunglasses">
+                Sunglasses
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/store/wristwatch">
+                Wristwatch
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/store">All Products</NavDropdown.Item>
               <NavDropdown.Item href="/addProducts">
@@ -28,7 +36,7 @@ function CollapsibleExample() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link href="/about">About us</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Comments
             </Nav.Link>

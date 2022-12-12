@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./addProducts.css";
@@ -8,65 +8,71 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 //import Cards from "../cards/Cards";
 //import { ProductsContext } from "../../App";
 //import { allProducts } from "../list/List";
+import { StoreItem } from "../../components/cards/Cardscrud";
+import "../../pages/store.css";
+import { allProducts } from "../../data/List";
+
 import Swal from "sweetalert2";
 
 //Api connect
 import axios from "axios";
 
 function AddProduct(props) {
-  //   const url = "http://localhost:3030/product";
-  //   const [title, setTitle] = useState("");
-  //   const [price, setPrice] = useState("");
-  //   const [stock, setStock] = useState("");
-  //   const [image, setImage] = useState("");
-  //   const [description, setDescription] = useState("");
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-  //     try {
-  //       var bodyFormData = new FormData();
-  //       bodyFormData.append("stock", stock);
-  //       bodyFormData.append("price", price);
-  //       bodyFormData.append("title", title);
-  //       bodyFormData.append("image", image[0]);
-  //       bodyFormData.append("description", description);
-  //       const resp = await axios.post(url, bodyFormData, {
-  //         headers: { "Content-Type": "multipart/form-data" },
-  //       });
-  //       console.log(resp.data);
-  //     } catch (error) {
-  //       console.log(error.response);
-  //     }
-  //     resetInputs();
-  //     e.target.rest();
-  //   };
+  const url = "http://localhost:3060/product";
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
+  const [description, setDescription] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      var bodyFormData = new FormData();
+      bodyFormData.append("category", category);
+      bodyFormData.append("price", price);
+      bodyFormData.append("title", title);
+      bodyFormData.append("image", image[0]);
+      bodyFormData.append("description", description);
+      const resp = await axios.post(url, bodyFormData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      console.log(resp.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+    resetInputs();
+    e.target.rest();
+  };
 
-  //   const titleInput = useRef();
-  //   const stockInput = useRef();
-  //   const priceInput = useRef();
-  //   const categoryInput = useRef();
-  //   const descriptionInput = useRef();
-  //   const imageInput = useRef();
+  //Cuando se manda el form se limpia el formulario
+  const titleInput = useRef();
+  const priceInput = useRef();
+  const categoryInput = useRef();
+  const descriptionInput = useRef();
+  const imageInput = useRef();
+  function resetInputs() {
+    titleInput.current.value = "";
+    priceInput.current.value = "";
+    categoryInput.current.value = "";
+    descriptionInput.current.value = "";
+    imageInput.current.value = "";
+  }
 
-  //   //Cuando se manda el form se limpia el formulario
-  //   function resetInputs() {
-  //     titleInput.current.value = "";
-  //     stockInput.current.value = "";
-  //     priceInput.current.value = "";
-  //     categoryInput.current.value = "";
-  //     descriptionInput.current.value = "";
-  //     imageInput.current.value = "";
-  //   }
-  //   ///////////////////////
-
-  //   const [productos, setProductos] = useState(null);
-
-  //   useEffect(() => {
-  //     allProducts(setProductos);
-  //   }, []);
-
+  //Muestra un alerta cuando se envia el formulario
   const showAlert = () => {
     Swal.fire("Good job!", "You added this product to the cart!", "success");
   };
+
+  //Mostrar todos los productos de la base de datos
+  const [products, setProducts] = useState(null);
+  useEffect(() => {
+    async function fetchData() {
+      const products = await allProducts();
+      setProducts(products);
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <section className="addproduct__container">
@@ -76,7 +82,7 @@ function AddProduct(props) {
           method="POST"
           className="form"
           id="form"
-          //   onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           encType="multipart/form-data"
         >
           <Row>
@@ -87,23 +93,25 @@ function AddProduct(props) {
                   name="title"
                   type="text"
                   placeholder="Enter Title"
-                  // value={title}
-                  // onChange={(e) => setTitle(e.target.value)}
-                  // ref={titleInput}
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  ref={titleInput}
+                  required
                 />
               </Form.Group>
             </Col>
 
             <Col sm={12} md={6}>
               <Form.Group className="mb-3">
-                <Form.Label>price</Form.Label>
+                <Form.Label>Price</Form.Label>
                 <Form.Control
                   name="price"
                   type="number"
                   placeholder="Enter price"
-                  //   value={price}
-                  //   onChange={(e) => setPrice(e.target.value)}
-                  //   ref={priceInput}
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                  ref={priceInput}
+                  required
                 />
               </Form.Group>
             </Col>
@@ -113,23 +121,24 @@ function AddProduct(props) {
             <Col sm={12} md={6}>
               <Form.Label>Category</Form.Label>
               <Form.Select
-                // ref={categoryInput}
-                value=" "
+                ref={categoryInput}
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
                 className="mb-3"
                 aria-label="Default select example"
+                required
               >
-                <option>Open this select menu</option>
-                <option value="monitor">Fragance</option>
-                <option value="teclado">Sunglasses</option>
-                <option value="mouse">Wristwatch</option>
+                <option value="fragance">Fragance</option>
+                <option value="sunglasses">Sunglasses</option>
+                <option value="wristwatch">Wristwatch</option>
               </Form.Select>
               <Form.Group controlId="formFile" className="mb-3">
                 <Form.Label>Default file input example</Form.Label>
                 <Form.Control
                   type="file"
                   name="image"
-                  //   onChange={(e) => setImage(e.target.files)}
-                  //   ref={imageInput}
+                  onChange={(e) => setImage(e.target.files)}
+                  ref={imageInput}
                 />
               </Form.Group>
             </Col>
@@ -139,15 +148,17 @@ function AddProduct(props) {
                 name="description"
                 controlId="floatingTextarea2"
                 label="Description"
-                // value={description}
-                // onChange={(e) => setDescription(e.target.value)}
-                // ref={descriptionInput}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                ref={descriptionInput}
+                required
               >
                 <Form.Control
                   as="textarea"
                   placeholder="Leave a comment here"
                   style={{ height: "125px" }}
-                  //   ref={descriptionInput}
+                  ref={descriptionInput}
+                  required
                 />
               </FloatingLabel>
             </Col>
@@ -165,6 +176,27 @@ function AddProduct(props) {
           </Button>
         </form>
       </section>
+      <div className="store__container">
+        <h4 className="m-3 mt-0 mb-0 p-3">All Products</h4>
+        <div className="m-3">
+          <Row md={2} xs={1} lg={3} className="g-3">
+            {products != null
+              ? products.map((item) => (
+                  <Col
+                    key={item.idProduct}
+                    title={products.title}
+                    image={products.image}
+                    category={products.category}
+                    idproduct={products.idProduct}
+                    description={products.description}
+                  >
+                    <StoreItem {...item} />
+                  </Col>
+                ))
+              : "no hay productos"}
+          </Row>
+        </div>
+      </div>
     </>
   );
 }
