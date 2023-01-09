@@ -12,14 +12,14 @@ const { ValidateProducts } = require("../../models/product.model");
 const ValidateToken = require("../../middlewares/validateToken");
 
 /**Get all Products */
-product.get("/", ValidateToken, getProduct);
+product.get("/", /*ValidateToken,*/ getProduct);
 product.post(
   "/",
-  [uploadMulter.single("image"), ValidateProducts, ValidateToken],
+  [uploadMulter.single("image"), ValidateProducts /*ValidateToken*/],
   createProduct
 );
-product.get("/:idProduct", ValidateToken, getByIdProduct);
-product.put("/:idProduct", ValidateToken, updateProduct);
-product.delete("/:idProduct", ValidateToken, deleteProduct);
+product.get("/:idProduct", /*ValidateToken,*/ getByIdProduct);
+product.put("/:idProduct", /*ValidateToken,*/ updateProduct);
+product.delete("/:idProduct", /*ValidateToken,*/ deleteProduct);
 
 module.exports = product;

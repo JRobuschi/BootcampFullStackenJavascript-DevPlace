@@ -3,19 +3,6 @@ const jwt = require("jsonwebtoken");
 const { decode } = require("punycode");
 
 const validateToken = (req, res, next) => {
-  // const token = req.headers["x-acces"]; //auth, auth-token, token, x-acces-token
-  // console.log(token);
-  // if (!token) {
-  //   res.status(400).json({ error: "no token" });
-  // } else {
-  //   jwt.verify(token, `${process.env.TOKEN_JSW}`, (err) => {
-  //     if (err) {
-  //       res.status(403).json({ message: "Invalid token" });
-  //     } else {
-  //       next();
-  //     }
-  //   });
-  // }
   let token = req.headers["x-access-token"] || req.headers["authorization"];
 
   if (!token) {

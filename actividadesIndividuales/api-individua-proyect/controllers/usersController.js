@@ -142,6 +142,7 @@ function loginUser(req, res) {
     res.status(200).send({
       message: "Successful authentication!!!",
       token: tokenAccess,
+      user: user.email,
     });
   });
 }
@@ -154,38 +155,3 @@ module.exports = {
   deleteByUser,
   loginUser,
 };
-
-// if (req.body.email == "admin" && req.body.password == "12345") {
-//   const payload = {
-//     check: true,
-//   };
-//   const token = jwt.sign(payload, `${process.env.TOKEN_JSW}`, {
-//     expiresIn: "7d",
-//   });
-//   res.json({
-//     message: "AUTENTICACIÓN EXITOSA!!!",
-//     token: token,
-//   });
-// } else {
-//   res.json({
-//     message: "Usuario y/o Password Incorrectas",
-//   });
-// }
-
-// const password = req.body.password;
-//   const email = req.body.email;
-//   const tryingUser = await User.findOne({ email: email });
-//   if (!tryingUser) {
-//     res.status(401).json({ message: "Wrong user" });
-//   } else {
-//     const validPass = bcrypt.compareSync(password, tryingUser.password);
-//     if (!validPass) {
-//       res.status(401).json({ message: "Incorrect Password" });
-//     } else {
-//       const jsonToken = jwt.sign({ tryingUser }, `${process.env.TOKEN_JSW}`);
-//       res.json({
-//         message: "AUTENTICACIÓN EXITOSA!!!",
-//         token: jsonToken,
-//       });
-//     }
-//   }
