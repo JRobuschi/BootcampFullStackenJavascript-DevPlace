@@ -11,6 +11,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { StoreItem } from "../../components/cards/Cardscrud";
 import "../../pages/store.css";
 import { allProducts } from "../../data/List";
+import { BsSearch } from "react-icons/bs";
 
 import Swal from "sweetalert2";
 
@@ -72,6 +73,24 @@ function AddProduct(props) {
     }
     fetchData();
   }, []);
+
+  //Filtrar productos por nombre
+  const [selectProducts, setSelectProducts] = useState("");
+
+  function filterTitle(e) {
+    setTimeout(() => {
+      setSelectProducts(e.target.value);
+    }, 500);
+  }
+
+  let results = [];
+  if (!selectProducts) {
+    results = products;
+  } else {
+    results = products.filter((dato) =>
+      dato.title.toLowerCase().includes(selectProducts.toLocaleLowerCase())
+    );
+  }
 
   return (
     <>
@@ -176,12 +195,21 @@ function AddProduct(props) {
           </Button>
         </form>
       </section>
+
       <div className="store__container">
+        <div className="search-container">
+          <div className="style-container">
+            <input type="text" onChange={filterTitle} placeholder="Search" />
+            <h4>
+              <BsSearch />
+            </h4>
+          </div>
+        </div>
         <h4 className="m-3 mt-0 mb-0 p-3">All Products</h4>
         <div className="m-3">
           <Row md={2} xs={1} lg={3} className="g-3">
-            {products != null
-              ? products.map((item) => (
+            {results != null
+              ? results.map((item) => (
                   <Col
                     key={item.idProduct}
                     title={products.title}

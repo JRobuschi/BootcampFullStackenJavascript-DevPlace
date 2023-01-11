@@ -4,9 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import { useShoppingCart } from "../../context/shoppingCartContext";
+import { useLocation } from "react-router-dom";
 
-function CollapsibleExample() {
+function CollapsibleExample(props) {
   const { openCart, cartQuantity } = useShoppingCart();
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
@@ -37,7 +39,7 @@ function CollapsibleExample() {
           </Nav>
           <Nav>
             <Nav.Link href="/about">About us</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2} href="#memes" onClick={props.logOut}>
               Comments
             </Nav.Link>
             {cartQuantity > 0 && (

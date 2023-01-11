@@ -1,43 +1,62 @@
 import "./login.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function BasicExample() {
+export default function LoginPage() {
   const url = "http://localhost:3060/users/login";
-  const [datos, setDatos] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleInputChange = (event) => {
-    console.log(event.target.value);
-    setDatos({
-      ...datos,
-      [event.target.name]: event.target.value,
-    });
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedInApp");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      setUser(user);
+    }
+  }, []);
+
+  const submitLoginUser = async (e) => {
+    e.preventDefault();
+    try {
+      var bodyFormData = {
+        email: email,
+        password: password,
+      };
+
+      const resp = await axios.post(url, bodyFormData);
+
+      setEmail("");
+      setPassword("");
+
+      window.localStorage.setItem("loggedInApp", JSON.stringify(resp.data));
+      window.location.href = "/store";
+    } catch (error) {
+      setErrorMessage("Incorrect user or password");
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 7000);
+    }
   };
 
-  const sendData = (event) => {
-    event.preventDefault();
-    axios
-      .post(url, {
-        email: datos.email,
-        password: datos.password,
-      })
-      .then((response) => {
-        console.log(response.datos);
-      });
-  };
   return (
     <section id="contactUs">
       <h2>Contact Us</h2>
 
-      <form action="/" method="POST" className="form" onSubmit={sendData}>
-        <h3 className="form__title">Inicia Sesión</h3>
+      <form
+        action="/"
+        method="POST"
+        className="form"
+        onSubmit={submitLoginUser}
+      >
+        <h3 className="form__title">Log In</h3>
+        {errorMessage && <h3 className="form__error">{errorMessage}</h3>}
         <p className="form__paragraph">
-          No tienes una cuentas?{" "}
+          You do not have an account?{" "}
           <a href="/register" className="form__link">
-            Entra aquí
+            Click here
           </a>
         </p>
 
@@ -50,7 +69,8 @@ function BasicExample() {
               placeholder=" "
               required
               name="email"
-              onChange={handleInputChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <label for="user" class="form__label">
               Email:
@@ -67,7 +87,8 @@ function BasicExample() {
               className="form__input"
               placeholder=" "
               name="password"
-              onChange={handleInputChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <label for="password" className="form__label">
@@ -82,5 +103,3 @@ function BasicExample() {
     </section>
   );
 }
-
-export default BasicExample;

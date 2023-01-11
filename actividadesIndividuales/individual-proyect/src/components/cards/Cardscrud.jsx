@@ -6,8 +6,8 @@ import { formatCurrency } from "../../utilities/formatCurrency";
 export function StoreItem(props) {
   //Delete Product
 
-  const deleteProduct = async (id) => {
-    await axios.delete(`http://localhost:3060/product/${id}`);
+  const deleteProduct = async (idProduct) => {
+    await axios.delete(`http://localhost:3060/product/${idProduct}`);
   };
   return (
     <Card className="m-3 h-100 p-2">
@@ -27,7 +27,7 @@ export function StoreItem(props) {
           Detail
         </Button>
         <Button
-          onClick={() => deleteProduct(props.idPoduct)}
+          onClick={() => deleteProduct(props.idProduct)}
           className="mt-2 w-100"
           variant="outline-danger"
         >

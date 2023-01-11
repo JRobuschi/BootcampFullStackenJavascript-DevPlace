@@ -40,6 +40,11 @@
   margin-bottom: 0.5rem;
 }
 
+.form__error {
+  font-size: 1rem;
+  color: red;
+}
+
 .form__paragraph {
   font-weight: 300;
 }
