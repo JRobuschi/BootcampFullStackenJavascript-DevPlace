@@ -1,9 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import Hijo from "./components/Hijo";
-import Products from "./components/Products";
-import Tipos from "./components/Tipos";
-
+//import Todos from "./components/Todos";
+import Productos from "./components/Productos";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
     <>
       <Header />
       <Hijo />
-      <Products />
-      <Tipos />
+      <Productos />
     </>
   );
 }

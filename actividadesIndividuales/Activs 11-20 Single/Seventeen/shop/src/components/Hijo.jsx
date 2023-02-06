@@ -3,20 +3,20 @@ import "../App.css";
 
 function Abuelo(){
     return (<>
-    <h1>Hola soy el Abuelo</h1>
+    <h1>Tienda de Tecnologia</h1>
     <Padre/> 
         </>)
 }
 
 function Padre(){
     return(<>
-    <h2>Hola soy el Padre</h2>
+    <h2>La mejor atencion</h2>
     <Hijo/>
     </>)
 }
 
 function Hijo(){
-    return <h3>Hola soy el Hijo</h3>
+    return <h3>Muchos productos</h3>
 }
 
 export default Abuelo;

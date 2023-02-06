@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "Juan",
+    "country": "Argentina"
+  },
+  {
+    "id": 1,
+    "name": "Maria",
+    "country": "Brasil"
+  },
+  {
+    "id": 2,
+    "name": "Lalo",
+    "country": "Alemania"
+  },
+  {
+    "id": 3,
+    "name": "Martin",
+    "country": "Peru"
+  },
+  {
+    "id": 4,
+    "name": "Pedro",
+    "country": "Chile"
+  }
+]

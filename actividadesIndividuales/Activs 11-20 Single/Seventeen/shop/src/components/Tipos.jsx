@@ -35,16 +35,17 @@ const productos = [
     
 ];
 
-function resumenProductos(e) {
-  return alert(
-    <>
-      {productos.map((e) => (
-        <div key={e.id}>
-          <h3>{e.title}</h3>
-        </div>
-      ))}
-    </>
-  );
+
+function mapenado(){
+    return (<>{productos.map((e) => (
+        
+ <h3>{e.title}</h3>
+      ))}</>)
+}
+
+
+function resumenProductos() {
+  return alert(mapenado)
 }
 
 export default function Products() {

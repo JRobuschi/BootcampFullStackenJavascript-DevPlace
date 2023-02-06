@@ -3,6 +3,7 @@ var sequelize = require("../config/mysql.config").sequelize;
 const Joi = require("joi");
 const validateRequest = require("../middlewares/validateRequest");
 const DataTypes = require("mysql2");
+var Category = require("./category.model");
 
 var Products = sequelize.define(
   "products",
@@ -25,6 +26,7 @@ var Products = sequelize.define(
       type: Sequelize.DataTypes.INTEGER,
     },
     image: { type: Sequelize.DataTypes.TEXT },
+    //category_id: { type: Sequelize.DataTypes.TEXT },
   }
   // {
   //   classMethods: {
@@ -41,6 +43,9 @@ var Products = sequelize.define(
   //   },
   // }
 );
+Products.associate = (models) => {
+  Products.belongsTo(models.category);
+};
 
 const ValidateProducts = (req, res, next) => {
   const schema = Joi.object({

@@ -109,10 +109,10 @@ function BasicExample() {
           type="submit"
           className="form__submit"
           value="Enter"
-          onClick={() => {
-            const uno = showAlert();
-            uno();
-          }}
+          // onClick={() => {
+          //   const uno = showAlert();
+          //   uno();
+          // }}
         />
       </form>
     </section>

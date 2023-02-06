@@ -1,9 +1,9 @@
 var { Products } = require("../models/product.model");
 
 const getProduct = async (req, res) => {
-  const response = await Products.findAll(/*{
+  const response = await Products.findAll({
     include: ["categories"],
-  }*/)
+  })
     .then((data) => {
       const res = { error: false, data: data };
       return res;
@@ -58,7 +58,7 @@ const getByIdProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const response = await Products.findOne({
-      /*include: ["categories"],*/
+      include: ["categories"],
       where: { idProduct: id },
     })
       .then((data) => {

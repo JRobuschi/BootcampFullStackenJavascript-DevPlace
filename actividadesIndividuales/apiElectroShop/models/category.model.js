@@ -5,7 +5,7 @@ const validateRequest = require("../middlewares/validateRequest");
 const DataTypes = require("mysql2");
 
 var Category = sequelize.define("category", {
-  id: {
+  category_id: {
     type: Sequelize.DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
@@ -16,6 +16,10 @@ var Category = sequelize.define("category", {
     defaultValue: true,
   },
 });
+
+Category.associate = (models) => {
+  Category.hasMany(models.products);
+};
 
 const ValidateCategory = (req, res, next) => {
   const schema = Joi.object({

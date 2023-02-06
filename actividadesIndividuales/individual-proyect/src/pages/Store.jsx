@@ -4,6 +4,7 @@ import { StoreItem } from "../components/cards/Cards";
 import "./store.css";
 import { allProducts } from "../data/List";
 import { BsSearch } from "react-icons/bs";
+
 // import Sunglasses from "../components/category/Sunglasses";
 // import Wristwatch from "../components/category/Wristwatch";
 // import Fragance from "../components/category/Fragance";
